@@ -1,0 +1,1344 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "37da6f0e-891b-4978-9444-b60d2e3120f5",
+      "name": "beatjerky",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2023-07-08T10:54:30.000Z",
+      "uid": "18539128-37da6f0e-891b-4978-9444-b60d2e3120f5"
+    },
+    "item": [
+      {
+        "name": "auth",
+        "item": [
+          {
+            "name": "signup",
+            "id": "9e608e15-8831-4a7e-b636-95d64d7ae4ac",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"firstName\":\"Mian\",\n \"lastName\":\"Arslan\",\n \"email\":\"mian.m.arslan@hotmail.com\",\n \"password\":\"arslan@123\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/auth/signup",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "auth",
+                  "signup"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-9e608e15-8831-4a7e-b636-95d64d7ae4ac"
+          },
+          {
+            "name": "login",
+            "id": "ae1b0125-3242-4c13-90e8-f6dc0b4368fb",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"email\":\"mian.m.arslan@hotmail.com\",\n \"password\":\"arslan@123\",\n \"isAdmin\":true\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/auth/login",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "auth",
+                  "login"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-ae1b0125-3242-4c13-90e8-f6dc0b4368fb"
+          },
+          {
+            "name": "forgot password",
+            "id": "87095ae2-bb25-42a3-9743-fc4f5cc073d0",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"email\":\"mian.m.arslan@hotmail.com\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/auth/forgotPassword",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "auth",
+                  "forgotPassword"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-87095ae2-bb25-42a3-9743-fc4f5cc073d0"
+          },
+          {
+            "name": "resetPassword",
+            "id": "6664cad7-06f6-4e81-a734-2ce7e1e33131",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"password\":\"123\",\n \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pYW4ubS5hcnNsYW5AaG90bWFpbC5jb20iLCJpYXQiOjE2ODYyNTQ3OTd9.5sAMDvne8eUgcUaq0ARX-6YzMBdv8sBTycZYUfehA6g\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/auth/resetPassword",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "auth",
+                  "resetPassword"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-6664cad7-06f6-4e81-a734-2ce7e1e33131"
+          },
+          {
+            "name": "logout",
+            "id": "61305ca3-28b8-47bd-90fe-4b97c05037ec",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/auth/logout",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "auth",
+                  "logout"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-61305ca3-28b8-47bd-90fe-4b97c05037ec"
+          }
+        ],
+        "id": "8ea35fc1-cee2-443d-ae4b-9d1768d561d4",
+        "uid": "18539128-8ea35fc1-cee2-443d-ae4b-9d1768d561d4"
+      },
+      {
+        "name": "users",
+        "item": [
+          {
+            "name": "get all users",
+            "id": "e7d8360c-6a47-4582-b4fb-f1e3974334bb",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/users",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "users"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-e7d8360c-6a47-4582-b4fb-f1e3974334bb"
+          },
+          {
+            "name": "get current user",
+            "id": "0295b9ea-3874-49a5-a042-fda9dd7c4e79",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/users/current?userId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "users",
+                  "current"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-0295b9ea-3874-49a5-a042-fda9dd7c4e79"
+          },
+          {
+            "name": "upload user profile",
+            "id": "0b01370d-9582-4157-9cd0-16beac2317c3",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "file",
+                    "type": "file",
+                    "src": "/Users/mian.m.arslan/Downloads/download.png"
+                  },
+                  {
+                    "key": "userId",
+                    "value": "2",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": {
+                "raw": "{{baseurl}}/users/profileImg",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "users",
+                  "profileImg"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-0b01370d-9582-4157-9cd0-16beac2317c3"
+          }
+        ],
+        "id": "9a23f97b-cd3e-4c67-837e-94f2a1f9c52d",
+        "uid": "18539128-9a23f97b-cd3e-4c67-837e-94f2a1f9c52d"
+      },
+      {
+        "name": "user feed",
+        "item": [
+          {
+            "name": "feed",
+            "id": "42e52fe3-ddc8-4a64-9378-d4a33d630ce0",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "feed",
+                    "type": "file",
+                    "src": "/Users/mian.m.arslan/Downloads/download.png"
+                  },
+                  {
+                    "key": "description",
+                    "value": "This is superior logo",
+                    "type": "text"
+                  },
+                  {
+                    "key": "userId",
+                    "value": "2",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": {
+                "raw": "{{baseurl}}/feed",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feed"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-42e52fe3-ddc8-4a64-9378-d4a33d630ce0"
+          },
+          {
+            "name": "get all feeds",
+            "id": "8dbb1355-8948-4e81-a403-6922b27bcc98",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/feed/all?limit=10&offset=0",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feed",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "limit",
+                    "value": "10",
+                    "type": "text"
+                  },
+                  {
+                    "key": "offset",
+                    "value": "0",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-8dbb1355-8948-4e81-a403-6922b27bcc98"
+          },
+          {
+            "name": "get all logged in user feeds",
+            "id": "7fbc99d7-fdc7-4b3f-a9e0-40d2c20e6df9",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/feed/?userId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feed",
+                  ""
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-7fbc99d7-fdc7-4b3f-a9e0-40d2c20e6df9"
+          },
+          {
+            "name": "delete user feed",
+            "id": "4bf30c8e-581c-43cc-94d9-8959e041dfef",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/feed?userId=2&feedId=1",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feed"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  },
+                  {
+                    "key": "feedId",
+                    "value": "1",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-4bf30c8e-581c-43cc-94d9-8959e041dfef"
+          }
+        ],
+        "id": "eaa2987a-f430-40a7-9d65-364d00cd08c9",
+        "uid": "18539128-eaa2987a-f430-40a7-9d65-364d00cd08c9"
+      },
+      {
+        "name": "user video",
+        "item": [
+          {
+            "name": "create video",
+            "id": "5a082d74-e728-4d7d-aeed-b501044479ae",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "file",
+                    "type": "file",
+                    "src": "/Users/mian.m.arslan/Downloads/ARSLAN INTRO.mp4"
+                  },
+                  {
+                    "key": "userId",
+                    "value": "2",
+                    "type": "text"
+                  },
+                  {
+                    "key": "description",
+                    "value": "intro",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": {
+                "raw": "{{baseurl}}/video",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "video"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-5a082d74-e728-4d7d-aeed-b501044479ae"
+          },
+          {
+            "name": "get user video",
+            "id": "cd689e71-a908-4d28-a888-33acfa2e0654",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/video/?userId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "video",
+                  ""
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-cd689e71-a908-4d28-a888-33acfa2e0654"
+          },
+          {
+            "name": "get all user video",
+            "id": "5ecf65cc-05e4-4908-830d-0ae841a4b97f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/video/all?limit=10&offset=0",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "video",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "limit",
+                    "value": "10"
+                  },
+                  {
+                    "key": "offset",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-5ecf65cc-05e4-4908-830d-0ae841a4b97f"
+          },
+          {
+            "name": "delete user video",
+            "id": "2c0a6a11-120f-4e98-835d-5799ae734c0e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/video?userId=2&videoId=1",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "video"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  },
+                  {
+                    "key": "videoId",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-2c0a6a11-120f-4e98-835d-5799ae734c0e"
+          }
+        ],
+        "id": "18336594-751e-49db-ae2c-d0f1970c90c0",
+        "uid": "18539128-18336594-751e-49db-ae2c-d0f1970c90c0"
+      },
+      {
+        "name": "follower",
+        "item": [
+          {
+            "name": "create follower",
+            "id": "a96addd3-ce70-4bab-b0da-2c42f101538c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":12,\n \"followerId\":2\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/follower",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "follower"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-a96addd3-ce70-4bab-b0da-2c42f101538c"
+          },
+          {
+            "name": "get followers",
+            "id": "fcd91558-e802-4eac-8e3f-2ce7c5cfb70d",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/follower?userId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "follower"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-fcd91558-e802-4eac-8e3f-2ce7c5cfb70d"
+          },
+          {
+            "name": "delete followers",
+            "id": "351c4dda-51f1-4b2f-8d88-f0a3771b921c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/follower?userId=2&followerId=12",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "follower"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  },
+                  {
+                    "key": "followerId",
+                    "value": "12",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-351c4dda-51f1-4b2f-8d88-f0a3771b921c"
+          }
+        ],
+        "id": "4568a3c8-cbb1-425b-9a6e-9932227fc0f8",
+        "uid": "18539128-4568a3c8-cbb1-425b-9a6e-9932227fc0f8"
+      },
+      {
+        "name": "feed like",
+        "item": [
+          {
+            "name": "like feed",
+            "id": "3cb29989-2f60-481b-abf9-239a53f43811",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"feedId\":18\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedLike",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedLike"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-3cb29989-2f60-481b-abf9-239a53f43811"
+          },
+          {
+            "name": "all like feed",
+            "id": "db33ed12-3443-4d83-91ce-e3b2f5232d36",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedLike/all?feedId=18",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedLike",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "feedId",
+                    "value": "18",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-db33ed12-3443-4d83-91ce-e3b2f5232d36"
+          },
+          {
+            "name": "dislike feed",
+            "id": "aee7d335-8f58-4c4e-bdc4-e37f6fa38df4",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"feedId\":18\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedLike",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedLike"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-aee7d335-8f58-4c4e-bdc4-e37f6fa38df4"
+          }
+        ],
+        "id": "fc56d069-4c64-4d2e-9ac1-144fb14bc0a9",
+        "uid": "18539128-fc56d069-4c64-4d2e-9ac1-144fb14bc0a9"
+      },
+      {
+        "name": "feed Comment",
+        "item": [
+          {
+            "name": "comment feed",
+            "id": "2e052cfd-ab65-4030-b92c-92c7261591de",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"feedId\":18,\n \"comment\":\"this is testing\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedComment",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedComment"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-2e052cfd-ab65-4030-b92c-92c7261591de"
+          },
+          {
+            "name": "all comments of feed",
+            "id": "085f7f2b-9872-4000-a61c-1fbd93f23f02",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedComment/all?feedId=18",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedComment",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "feedId",
+                    "value": "18"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-085f7f2b-9872-4000-a61c-1fbd93f23f02"
+          },
+          {
+            "name": "delete comment",
+            "id": "1b76e903-2346-4c10-a24c-540368ca1b0a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"feedId\":18,\n \"commentId\":1\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/feedComment",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "feedComment"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-1b76e903-2346-4c10-a24c-540368ca1b0a"
+          }
+        ],
+        "id": "5fcb871c-89d7-41a7-af91-e5917ecdd25f",
+        "uid": "18539128-5fcb871c-89d7-41a7-af91-e5917ecdd25f"
+      },
+      {
+        "name": "video Comment",
+        "item": [
+          {
+            "name": "comment video",
+            "id": "1c8f0c93-5301-4469-ada4-5c7d60d65050",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"videoId\":3,\n \"comment\":\"this is testing\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoComment",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoComment"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-1c8f0c93-5301-4469-ada4-5c7d60d65050"
+          },
+          {
+            "name": "all comments of video",
+            "id": "c7eb7a71-9124-4374-9c37-09ecbe413b80",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoComment/all?videoId=3",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoComment",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "videoId",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-c7eb7a71-9124-4374-9c37-09ecbe413b80"
+          },
+          {
+            "name": "delete comment",
+            "id": "0551cf78-088f-49f8-9dd3-31a28cea4abc",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"videoId\":3,\n \"commentId\":1\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoComment",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoComment"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-0551cf78-088f-49f8-9dd3-31a28cea4abc"
+          }
+        ],
+        "id": "1870a8f9-3ccc-454f-95a3-d06f98cf6dce",
+        "uid": "18539128-1870a8f9-3ccc-454f-95a3-d06f98cf6dce"
+      },
+      {
+        "name": "video like",
+        "item": [
+          {
+            "name": "like video",
+            "id": "5aaf10dd-4e2a-4963-b14b-8037126bf0fb",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"videoId\":3\n }",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoLike",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoLike"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-5aaf10dd-4e2a-4963-b14b-8037126bf0fb"
+          },
+          {
+            "name": "all like video",
+            "id": "1b1794cb-7fef-43e4-b8b0-80110c100b6e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoLike/all?videoId=3",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoLike",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "videoId",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-1b1794cb-7fef-43e4-b8b0-80110c100b6e"
+          },
+          {
+            "name": "dislike video",
+            "id": "e5d04d8b-1784-4a15-abd8-74c79a077f5c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"userId\":2,\n \"videoId\":3\n }",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/videoLike",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "videoLike"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-e5d04d8b-1784-4a15-abd8-74c79a077f5c"
+          }
+        ],
+        "id": "c87c2f7b-c5fb-4b15-a145-3e2025c4cc24",
+        "uid": "18539128-c87c2f7b-c5fb-4b15-a145-3e2025c4cc24"
+      },
+      {
+        "name": "video category",
+        "item": [
+          {
+            "name": "all category with songs",
+            "id": "a6a32fb1-cdd4-4670-b162-1a4c08919b30",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/category/getAllCategoriesWithSongs",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "category",
+                  "getAllCategoriesWithSongs"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-a6a32fb1-cdd4-4670-b162-1a4c08919b30"
+          }
+        ],
+        "id": "c0d4253e-8011-4755-b2b3-a2c7258338ab",
+        "uid": "18539128-c0d4253e-8011-4755-b2b3-a2c7258338ab"
+      },
+      {
+        "name": "music style songs",
+        "item": [
+          {
+            "name": "get all music style base in category id",
+            "id": "f2a9bdcb-5fa6-435e-8321-6d438d3b2774",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/musicStyleSongs/all?categoryId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "musicStyleSongs",
+                  "all"
+                ],
+                "query": [
+                  {
+                    "key": "categoryId",
+                    "value": "2",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-f2a9bdcb-5fa6-435e-8321-6d438d3b2774"
+          }
+        ],
+        "id": "0c79fb0c-b6f1-4eee-a37c-6a1470d7be08",
+        "uid": "18539128-0c79fb0c-b6f1-4eee-a37c-6a1470d7be08"
+      },
+      {
+        "name": "music style category",
+        "item": [
+          {
+            "name": "New Request",
+            "id": "edec7731-1d8c-4af7-99e3-a38a0653689b",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseurl}}/musicStyle/all",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "musicStyle",
+                  "all"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-edec7731-1d8c-4af7-99e3-a38a0653689b"
+          }
+        ],
+        "id": "e64b3b58-3dd5-4a3b-85dd-906e5f662303",
+        "uid": "18539128-e64b3b58-3dd5-4a3b-85dd-906e5f662303"
+      },
+      {
+        "name": "message",
+        "item": [
+          {
+            "name": "start message",
+            "id": "406ecbcf-745d-4df7-893d-faaa5626f520",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/message/start",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "message",
+                  "start"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-406ecbcf-745d-4df7-893d-faaa5626f520"
+          },
+          {
+            "name": "send message",
+            "id": "cee77413-e06d-4628-9fcc-8b541d01f63b",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"senderId\":11,\n \"receiverId\":2,\n \"text\":\"hello arslan\",\n \"conversationId\":2\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/message",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "message"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-cee77413-e06d-4628-9fcc-8b541d01f63b"
+          },
+          {
+            "name": "get a specific conversation",
+            "id": "aa122490-d4b7-42dc-a4cc-5f2843490319",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"senderId\":11,\n \"receiverId\":2,\n \"text\":\"hello arslan\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/message?conversationId=1",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "message"
+                ],
+                "query": [
+                  {
+                    "key": "conversationId",
+                    "value": "1",
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-aa122490-d4b7-42dc-a4cc-5f2843490319"
+          },
+          {
+            "name": "get a list",
+            "id": "cd4bb2cb-6740-421e-bf6f-1ed9c6f537af",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n \"senderId\":11,\n \"receiverId\":2,\n \"text\":\"hello arslan\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{baseurl}}/message/list?userId=2",
+                "host": [
+                  "{{baseurl}}"
+                ],
+                "path": [
+                  "message",
+                  "list"
+                ],
+                "query": [
+                  {
+                    "key": "userId",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "18539128-cd4bb2cb-6740-421e-bf6f-1ed9c6f537af"
+          }
+        ],
+        "id": "d239b8b6-1ac8-48aa-aed7-74f7ae5a9c27",
+        "uid": "18539128-d239b8b6-1ac8-48aa-aed7-74f7ae5a9c27"
+      },
+      {
+        "name": "start conversation",
+        "item": [],
+        "id": "bff90615-01cf-41df-a4d1-eb07c1cf8d85",
+        "uid": "18539128-bff90615-01cf-41df-a4d1-eb07c1cf8d85"
+      }
+    ]
+  }
+}
